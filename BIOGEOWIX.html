@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ваше Имя - Личный Сайт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background 1s ease;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Привет, я [Ваше Имя]</h1>
+        <p>Добро пожаловать на мой личный веб-сайт</p>
+    </header>
+
+    <nav>
+        <a href="#about">О мне</a>
+        <a href="#achievements">Достижения</a>
+        <a href="#interests">Увлечения</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+
+    <section id="about">
+        <h2>О мне</h2>
+        <p>Здесь добавьте информацию о своей жизни, образовании, карьере и прочее.</p>
+    </section>
+
+    <section id="achievements">
+        <h2>Достижения</h2>
+        <p>Расскажите о ваших значимых достижениях и моментах в жизни.</p>
+    </section>
+
+    <section id="interests">
+        <h2>Увлечения</h2>
+        <p>Опишите свои увлечения, хобби и интересы.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Галерея</h2>
+        <p>Добавьте фотографии, отражающие различные этапы вашей жизни и достижения.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Предоставьте способы связи, чтобы посетители могли связаться с вами.</p>
+    </section>
+
+    <footer>
+        &copy; 2024 [Ваше Имя]. Все права защищены.
+    </footer>
+
+    <script>
+        function changeBackgroundColor() {
+            const body = document.body;
+            const currentTime = new Date();
+            const seconds = currentTime.getSeconds();
+
+            // Изменяем цвет фона на основе времени
+            const red = Math.sin(seconds * 0.1) * 127 + 128;
+            const green = Math.sin(seconds * 0.2) * 127 + 128;
+            const blue = Math.sin(seconds * 0.3) * 127 + 128;
+
+            body.style.backgroundColor = `rgb(${red.toFixed(0)}, ${green.toFixed(0)}, ${blue.toFixed(0)})`;
+        }
+
+        // Обновляем цвет фона каждую секунду
+        setInterval(changeBackgroundColor, 1000);
+    </script>
+</body>
+
+</html>
